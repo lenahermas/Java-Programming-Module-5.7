@@ -1,0 +1,16 @@
+def main():
+  increaseRate = 0.05  # tuition percent increase rate
+  TUITION = 10000  # Assuming initial tuition cost is $10,000
+  tInTenYears = TUITION  # tuition cost in 10 years
+  fourYearTuitionCost = 0
+  for i in range(10):
+      tInTenYears *= (1 + increaseRate) # Use increaseRate here to calculate tuition in 10 years
+  fourYearTuitionCost = tInTenYears
+  print("Tuition cost in 10 years: " +
+          "${:,.2f}".format(tInTenYears))
+  for i in range(4):
+      fourYearTuitionCost *= (1 + increaseRate) # Use increaseRate here to calculate the four year cost
+  print("Total cost of 4 years starting today: " +
+          "${:,.2f}".format(fourYearTuitionCost)) # Print fourYearTuitionCost
+if __name__ == "__main__":
+  main()
